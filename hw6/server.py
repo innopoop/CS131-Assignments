@@ -7,7 +7,7 @@ import json
 
 #Port assignments: 15875--15879
 
-GOOGLE_API_KEY = "AIzaSyAcFXjOaI1w1MDNBpLAvakTlI45rW9bR_U"
+GOOGLE_API_KEY = "OMITTED"
 REQUEST_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
 HOST = "127.0.0.1"
 
