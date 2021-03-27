@@ -1,0 +1,20 @@
+Subset:
+I solved this problem by checking whether every element within list a was also in list b. I believe the obvious weakness is that it doesnt scale well with duplicates.
+
+Equal_Sets:
+I initially solved this problem by checking whether every element in set a was also in set b, but then I looked at the code_help github and realized that the obvious equality comparison for sets is whether both sets are subsets of each other. Therefore I changed my solution to be subst a b and subset b a. This solution is dependent on the performance of subset.
+
+Set_Union:
+I appended the elements of set b to set a and returned the final set. This solution seems to be the simplest it can be, especially because we do not have to remove duplicates. I don't see any pitfalls of using this method unless the conditions change.
+
+Self_Member:
+I'm going to be completely honest and say that I had very little to no understanding of exactly what was going on with the Rousseau's Paradox. However I know that the only case where a set is a subset of itself is when the set is an infinite set upon itself. Since we can only send in finite sets as inputs, I assumed this to mean that no matter what, the function should return false.
+
+Computed_Fixed_Point:
+The only way (in my opinion) to solve this problem is with the way I solved it.
+Filter_Reachable:
+- allNonterminals: returns flattened list 
+- set_intersection: intersection of two sets
+- getReachableSymbols: Check if any rules are reachable, if yes return symbols, if not get the symbols reachable from input and recurse
+- Filter out rules that don't have symbols in allReachables
+I considered using computed_fixed_point to continuously call a simpler getReachableSymbols function, but I was understand it well and switched. Downsides include many helper functions. Upsides include no extra work since processed rules are filtered out.

@@ -1,0 +1,9 @@
+I did not write make_parser in terms of make_matcher because make_matcher had no way of keeping track of the symbols that I encountered while trying to find a complete match. 
+The two were written pretty similarly except for make_parser, I added a return list in my acceptor function that kept track of all of the symbols I encountered while traversing.
+This lead to duplication of code that could have been easily avoided if I simply implemented make_matcher to be what I needed in make_parser, however I was unable to do so quickly.
+Major weaknesses with my solution are duplication of code and separation of tree creation and evaluation of matches with fragments. I feel like it was definitely possible to 
+implement a make_parser where you iteratively create the tree as you evaluate matches. However, I was unable to find a solution like that and stuck with keeping track of successful
+matches. 
+
+My implementation might not work well with grammars that are context-sensitive because it doesn't check for anything around it, but only for the literal matching of a rule from
+the start to finish.
